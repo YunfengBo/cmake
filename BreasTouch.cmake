@@ -39,6 +39,12 @@ if(OS_WINDOWS)
   set(LINKER_FLAGS_DEBUG     "/DEBUG /SUBSYSTEM:CONSOLE")
 endif()
 
+if(OS_LINUX)
+  set(COMPILER_FLAGS         " -Wall")
+  set(COMPILER_FLAGS_DEBUG "-O0 -g -ggdb")
+  set(COMPILER_FLAGS_RELEASE "-O3")
+endif()
+
 # =============================================================================
 # Merge compiler/linker flags.
 # 合并时，如果有重复的选项，经过试验，会使用后面的选项（即上面的设置项）
