@@ -40,9 +40,9 @@ if(OS_WINDOWS)
 endif()
 
 if(OS_LINUX)
-  set(COMPILER_FLAGS         " -Wall")
-  set(COMPILER_FLAGS_DEBUG "-O0 -g -ggdb")
-  set(COMPILER_FLAGS_RELEASE "-O3")
+  set(COMPILER_FLAGS         "-Wall")
+  set(COMPILER_FLAGS_DEBUG "-O0 -ggdb")
+  set(COMPILER_FLAGS_RELEASE "")
 endif()
 
 # =============================================================================
